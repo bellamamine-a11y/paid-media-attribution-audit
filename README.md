@@ -10,11 +10,7 @@ paid media measurement problem from raw data to stakeholder dashboard.
 
 ---
 
-![Dashboard screenshot](assets/README_dashboard.png)
-
-> **TODO:** Record a short GIF of the dashboard (suggested tool: Kap on macOS or
-> ScreenToGif on Windows) and replace `assets/README_dashboard.png` with it.
-> Then update the image tag above to point to the GIF.
+![Dashboard demo](assets/demo.gif)
 
 ---
 
@@ -63,7 +59,7 @@ Five findings, quantified:
 
 ## The Dashboard
 
-[![Dashboard](assets/README_dashboard.png)](assets/README_dashboard.png)
+![Tracking-adjusted toggle](assets/demo_adjusted.gif)
 
 Live: https://paid-media-attribution-audit-vw5acidxm2cygewkvpjhpq.streamlit.app/
 
