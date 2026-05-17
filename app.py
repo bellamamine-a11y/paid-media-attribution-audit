@@ -454,16 +454,20 @@ with tab_timeseries:
     in_range = lambda d: d_start <= d <= d_end
 
     if in_range(TRACKING_FIX_DATE):
-        fig_rev.add_vline(
-            x=TRACKING_FIX_DATE, line_dash="dash", line_color="#ef4444",
-            annotation_text="Tracking fix (2024-03-01)",
-            annotation_position="top right",
+        fig_rev.add_vline(x=TRACKING_FIX_DATE, line_dash="dash", line_color="#ef4444")
+        fig_rev.add_annotation(
+            x=TRACKING_FIX_DATE, xref="x", y=1.0, yref="paper",
+            yanchor="bottom", showarrow=False,
+            text="Tracking fix (2024-03-01)", font=dict(size=12),
+            bgcolor="rgba(255,255,255,0.6)",
         )
     if in_range(PRICE_EVENT_DATE):
-        fig_rev.add_vline(
-            x=PRICE_EVENT_DATE, line_dash="dot", line_color="#f59e0b",
-            annotation_text="Price increase (2024-03-16)",
-            annotation_position="top right",
+        fig_rev.add_vline(x=PRICE_EVENT_DATE, line_dash="dot", line_color="#f59e0b")
+        fig_rev.add_annotation(
+            x=PRICE_EVENT_DATE, xref="x", y=1.0, yref="paper",
+            yanchor="bottom", showarrow=False,
+            text="Price increase (2024-03-16)", font=dict(size=12),
+            bgcolor="rgba(255,255,255,0.6)",
         )
 
     fig_rev.update_layout(
@@ -500,10 +504,12 @@ with tab_timeseries:
         legend=dict(orientation="h", y=1.12),
     )
     if in_range(TRACKING_FIX_DATE):
-        fig_purch.add_vline(
-            x=TRACKING_FIX_DATE, line_dash="dash", line_color="#ef4444",
-            annotation_text="Tracking fix",
-            annotation_position="top right",
+        fig_purch.add_vline(x=TRACKING_FIX_DATE, line_dash="dash", line_color="#ef4444")
+        fig_purch.add_annotation(
+            x=TRACKING_FIX_DATE, xref="x", y=1.0, yref="paper",
+            yanchor="bottom", showarrow=False,
+            text="Tracking fix", font=dict(size=12),
+            bgcolor="rgba(255,255,255,0.6)",
         )
     st.plotly_chart(fig_purch, use_container_width=True)
     st.warning(
