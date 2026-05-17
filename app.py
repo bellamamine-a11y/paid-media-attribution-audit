@@ -228,7 +228,7 @@ with tab_channel:
 
     def highlight_mismatch(row):
         if row["Campaign"] in ("Performance Max", "Prospecting"):
-            return ["background-color: #fef3c7"] * len(row)
+            return ["background-color: #B45309; color: white"] * len(row)
         return [""] * len(row)
 
     st.dataframe(
@@ -439,6 +439,8 @@ with tab_timeseries:
 
     if adjusted:
         pre_mask = daily_attr.index < TRACKING_FIX_DATE
+        daily_attr["revenue"]  = daily_attr["revenue"].astype(float)
+        daily_attr["purchase"] = daily_attr["purchase"].astype(float)
         daily_attr.loc[pre_mask, "revenue"]  /= (1 - PRE_FIX_GAP)
         daily_attr.loc[pre_mask, "purchase"] /= (1 - PRE_FIX_GAP)
 
