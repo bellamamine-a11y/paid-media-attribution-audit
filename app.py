@@ -13,7 +13,7 @@ from pathlib import Path
 
 st.set_page_config(
     page_title="Paid Media Attribution Audit | Marble & Co",
-    page_icon="assets/favicon.png" if Path("assets/favicon.png").exists() else "data:,",
+    page_icon="📊",
     layout="wide",
 )
 
@@ -134,7 +134,7 @@ if adjusted:
         "Tracking-adjusted estimate is active. Revenue and purchases for dates "
         "before 2024-03-01 are inflated by 1/(1-0.40) to model the ~40% "
         "attribution gap. This is a modeled estimate, not measured fact.",
-        icon="info",
+        icon=":material/info:",
     )
 
 # ---- KPI tiles ----
@@ -150,7 +150,7 @@ kpi_data = [
 ]
 for col, (label, value, note) in zip(kpi_cols, kpi_data):
     with col:
-        st.metric(label, value, delta=note if note else "")
+        st.metric(label, value, delta=note)
 
 st.divider()
 
