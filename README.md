@@ -3,8 +3,7 @@
 A self-contained marketing analytics case study that walks through a realistic
 paid media measurement problem from raw data to stakeholder dashboard.
 
-**Live dashboard:** `<STREAMLIT_URL>`
-Replace this placeholder after deploying to Streamlit Community Cloud (instructions below).
+**Live dashboard:** https://paid-media-attribution-audit-vw5acidxm2cygewkvpjhpq.streamlit.app/
 
 **Audience:** Marketing ops / MarTech recruiters and prospective clients.
 **Data:** Synthetic. Methodology mirrors a real engagement.
@@ -66,7 +65,7 @@ Five findings, quantified:
 
 [![Dashboard](assets/README_dashboard.png)](assets/README_dashboard.png)
 
-Live: `<STREAMLIT_URL>`
+Live: https://paid-media-attribution-audit-vw5acidxm2cygewkvpjhpq.streamlit.app/
 
 The Streamlit app lets a stakeholder:
 - Toggle between attributed-only and tracking-adjusted revenue estimates.
@@ -129,7 +128,7 @@ jupyter notebook analysis/diagnosis.ipynb
 2. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub.
 3. Click "New app", select this repo, set the main file to `app.py`, click Deploy.
 4. Once deployed, copy the URL Streamlit provides.
-5. Replace `<STREAMLIT_URL>` in this README (two occurrences) with that URL.
+5. Replace the Streamlit URL placeholders in this README with the deployed URL.
 6. Commit and push: `git add README.md && git commit -m "add Streamlit deploy URL" && git push`.
 
 The `data/output/` CSVs are committed to the repo so the app runs on Community
